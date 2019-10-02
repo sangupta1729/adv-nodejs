@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "path": "/",
+  "requestsPerSecond": "300",
+  "concurrency": "50",
+  "maxSeconds": "20"
+}
