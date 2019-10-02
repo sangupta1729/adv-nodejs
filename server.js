@@ -36,10 +36,15 @@ app.get('*', (req, res) => {
   res.status(404).send("Not Found");
 });
 
-const PORT = process.env.PORT || 3000;
-const server = app.listen(PORT, () => {
-  console.log(`App started on PORT ${PORT}`);
-});
+const PORT = process.env.PORT || 8080;
+const HOST = '0.0.0.0';
+
+const server = app.listen(PORT, HOST);
+console.log(`App started on HOST:PORT ${HOST}:${PORT}`);
+
+//const server = app.listen(PORT, () => {
+//  console.log(`App started on PORT ${PORT}`);
+//});
 
 // Export server for testing purposes
 module.exports.server = server;
